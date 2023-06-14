@@ -1,0 +1,40 @@
+.categories-page {
+	& .title {
+		text-align: center;
+		margin: 0 0 50px;
+	}
+	&__group {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 991.98px) {
+			display: block;
+		}
+	}
+	&__content {
+		flex: 0 1 78%;
+		animation-name: animItems;
+		animation-duration: 2s;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		height: 100%;
+	}
+
+	&__pagination {
+		margin-top: 40px;
+		ul {
+			justify-content: center;
+		}
+	}
+}
+
+@keyframes animItems {
+	from {
+		opacity: 0;
+		transform: translateX(30%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%) translateY(0%);
+	}
+}

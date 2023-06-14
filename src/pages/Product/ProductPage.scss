@@ -1,0 +1,18 @@
+.product-page {
+	&__group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 15px;
+	}
+	&__img {
+		flex: 0 1 55%;
+		& img {
+			width: 100%;
+			border-radius: 15px;
+		}
+		@media (max-width: 767.98px) {
+			flex: 0 1 100%;
+		}
+	}
+}

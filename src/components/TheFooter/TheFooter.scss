@@ -1,0 +1,112 @@
+.footer {
+	background-color: var(--bg-footer);
+	color: var(--color-white-green);
+	padding: 25px 0 40px;
+	@media (max-width: 767.98px) {
+		padding: 20px 0;
+	}
+	&__group {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 15px;
+		justify-content: space-between;
+		& h3 {
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			font-weight: var(--fw-600);
+			@media (max-width: 991.98px) {
+				margin-bottom: 10px;
+			}
+			@media (max-width: 767.98px) {
+				margin-bottom: 5px;
+				font-size: var(--fz-12);
+				line-height: 131%;
+			}
+		}
+		& h2 {
+			line-height: 131%;
+			max-width: 300px;
+			margin-top: 18px;
+			@media (max-width: 767.98px) {
+				margin-top: 12px;
+				font-size: var(--fz-14);
+			}
+			@media (max-width: 479.98px) {
+				max-width: 100%;
+			}
+		}
+	}
+	&__logo {
+		flex: 0 1 45%;
+		& a {
+			font-size: var(--fz-30);
+			font-weight: var(--fw-600);
+			color: var(--color-white-green);
+		}
+		@media (max-width: 479.98px) {
+			flex: auto;
+			align-items: center;
+			text-align: center;
+		}
+	}
+	&__info {
+		flex: 0 1 50%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@media (max-width: 991.98px) {
+			row-gap: 30px;
+			flex-direction: column;
+			align-content: flex-end;
+		}
+		@media (max-width: 767.98px) {
+			row-gap: 20px;
+		}
+		@media (max-width: 479.98px) {
+			flex: 0 1 100%;
+			align-content: center;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&__contacts {
+		& a {
+			line-height: 131%;
+			&:hover {
+				text-decoration: underline;
+				text-underline-offset: 7px;
+			}
+			@media (max-width: 991.98px) {
+				font-size: var(--fz-14);
+			}
+		}
+		@media (max-width: 991.98px) {
+			flex: 0 1 100%;
+		}
+	}
+	& a {
+		color: var(--color-white-green);
+	}
+}
+
+.addres-footer {
+	flex: 0 1 40%;
+	&__group {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		@media (max-width: 479.98px) {
+			justify-content: center;
+		}
+		& svg {
+			color: #fff;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: var(--color-blue);
+				transform: translateY(-2px) scale(1.01);
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+@import url('./nullstyle.css');
+
+body {
+	font-weight: var(--fw-400);
+	font-family: 'Montserrat', sans-serif;
+	font-size: var(--fz-17);
+	color: var(--color-black);
+	background-color: var(--bg-color-main);
+}
+
+:root {
+	--fz-37: 37px;
+	--fz-34: 34px;
+	--fz-30: 30px;
+	--fz-25: 25px;
+	--fz-24: 24px;
+	--fz-22: 22px;
+	--fz-21: 21px;
+	--fz-20: 20px;
+	--fz-18: 18px;
+	--fz-17: 17px;
+	--fz-16: 16px;
+	--fz-15: 15px;
+	--fz-14: 14px;
+	--fz-13: 13px;
+	--fz-12: 12px;
+	--fz-10: 10px;
+
+	--fw-normal: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+
+	--color-blue: #0eccdd;
+	--color-black: #000;
+	--color-white-green: #fafafafa;
+
+	--bg-color-main: #fff;
+	--bg-color-number: #ff8686;
+	--bg-color-number-hover: #ff5656;
+	--bg-footer: #2d2d2d;
+}
+
+#root {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.page {
+	flex: 1 1 auto;
+	padding: 82px 0 60px;
+	animation-name: animPage;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	transform: scale(0) translateY(0%);
+}
+
+.home-page {
+	padding-top: 0;
+}
+
+@keyframes animPage {
+	from {
+		opacity: 0;
+		transform: translateY(-30%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.nav {
+	padding: 15px 5px 20px 15px;
+	a {
+		color: var(--color-blue);
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+}
+
+.MuiButton-contained {
+	background-color: var(--color-blue) !important;
+}

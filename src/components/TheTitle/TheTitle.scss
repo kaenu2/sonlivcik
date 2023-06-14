@@ -1,0 +1,12 @@
+.title {
+	margin: 50px 0;
+	background-color: var(--color-white-green);
+	font-size: var(--fz-30);
+	@media (max-width: 479.98px) {
+		font-size: var(--fz-22);
+		margin: 20px 0;
+	}
+	& h1 {
+		padding: 15px;
+	}
+}

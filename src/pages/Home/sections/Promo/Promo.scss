@@ -1,0 +1,139 @@
+.promo-home {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-color: var(--color-white-green);
+	@media (max-width: 991.98px) {
+		align-items: flex-start;
+		padding-top: 76px;
+		height: 100%;
+	}
+	&__group {
+		display: flex;
+		align-items: center;
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+	}
+	&__info {
+		flex: 0 1 40%;
+		padding-bottom: 50px;
+		@media (max-width: 991.98px) {
+			flex: auto;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+		& h1 {
+			opacity: 0;
+			visibility: hidden;
+		}
+		& h2 {
+			max-width: 700px;
+			font-size: var(--fz-34);
+			padding-bottom: 20px;
+			animation-name: animationText;
+			animation-duration: 2s;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
+			opacity: 0;
+			transform: scale(0);
+			@media (max-width: 479.98px) {
+				font-size: var(--fz-20);
+			}
+			& span {
+				font-weight: var(--fw-600);
+				color: var(--color-blue);
+			}
+		}
+	}
+	&__button {
+		font-size: var(--fz-18);
+		padding: 10px 40px;
+		background-color: var(--color-blue);
+		border: 3px solid var(--color-blue);
+		animation-name: animationText;
+		animation-duration: 2s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		transform: scale(0);
+		color: var(--bg-color-main);
+		transition: all 0.3s ease 0s;
+		border-radius: 5px;
+		max-width: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			box-shadow: 2px 2px 20px 0px rgba(14, 204, 221, 1);
+			background-color: var(--color-blue);
+		}
+		@media (max-width: 991.98px) {
+			margin: 0 auto;
+		}
+		@media (max-width: 479.98px) {
+			font-size: var(--fz-15);
+			padding: 7px;
+			width: 100%;
+		}
+		// rgba(14, 204, 221, 1)
+	}
+	&__img {
+		flex: 0 1 60%;
+		animation: animationImg 2s forwards;
+		@media (max-width: 991.98px) {
+			flex: auto;
+		}
+		@media (max-width: 479.98px) {
+			position: relative;
+			left: 15px;
+		}
+		& img {
+			width: 100%;
+		}
+	}
+	& .number {
+		animation-name: animationTextR;
+		animation-duration: 2s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		transform: scale(0);
+		@media (min-width: 991.98px) {
+			display: none;
+		}
+	}
+}
+
+@keyframes animationImg {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes animationText {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+@keyframes animationTextR {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}

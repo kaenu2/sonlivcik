@@ -13,7 +13,7 @@ export const TheHeader = () => {
 						className='header__logo'
 					>
 						<p>
-							Сонливчика
+							Сонливчик
 							<span>Москва и Санк-Петербург</span>
 						</p>
 					</Link>

@@ -12,7 +12,10 @@ export const TheHeader = () => {
 						to={'/'}
 						className='header__logo'
 					>
-						Сонливчик
+						<p>
+							Сонливчика
+							<span>Москва и Санк-Петербург</span>
+						</p>
 					</Link>
 					<a
 						href='tel:+79209195600'

@@ -19,15 +19,29 @@
 		color: var(--color-black);
 		font-size: var(--fz-37);
 		font-weight: var(--fw-600);
-		line-height: 125%;
-		text-align: left;
 		animation-name: animLogo;
 		animation-duration: 2s;
 		animation-delay: 3s;
 		animation-fill-mode: forwards;
 		opacity: 0;
+		& p {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+		& span {
+			display: inline-block;
+			font-size: var(--fz-12);
+			padding: 0;
+		}
 		@media (max-width: 767.98px) {
 			font-size: var(--fz-21);
+		}
+		@media (max-width: 479.98px) {
+			align-content: flex-start;
+			p {
+				text-align: left;
+			}
 		}
 	}
 	&__tel {

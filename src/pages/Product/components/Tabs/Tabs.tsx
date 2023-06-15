@@ -13,15 +13,24 @@ export const TabsBlock = ({ elem }: { elem: IMattresses }) => {
 		categorie,
 		descr,
 		height,
-		id,
-		internal,
 		load,
 		name,
 		price,
 		rigidity,
-		size,
-		src
+		size
 	} = elem;
+
+	const changeNumber = (num: number) => {
+		if (num <= 10000) {
+			return num - 200;
+		}
+		if (num > 10000 && num <= 20000) {
+			return num - 500;
+		}
+		if (num > 20000) {
+			return num - 1000;
+		}
+	};
 
 	const onTab = (id: number) => {
 		setTab(id);
@@ -118,7 +127,7 @@ export const TabsBlock = ({ elem }: { elem: IMattresses }) => {
 					</div>
 					<div className='tabs__text text__price'>
 						<p>
-							<strong>{price[value]}</strong> &#8381;
+							<strong>{changeNumber(price[value])}</strong> &#8381;
 						</p>
 					</div>
 				</div>

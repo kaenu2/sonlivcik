@@ -14,6 +14,18 @@ export const ProductItem = ({
 	elem: IMattresses;
 	delay: number;
 }) => {
+	const changeNumber = (num: number) => {
+		if (num <= 10000) {
+			return num - 200;
+		}
+		if (num > 10000 && num <= 20000) {
+			return num - 500;
+		}
+		if (num > 20000) {
+			return num - 1000;
+		}
+	};
+
 	const { categorie, height, id, internal, name, price, rigidity, src } = elem;
 	return (
 		<div
@@ -50,7 +62,7 @@ export const ProductItem = ({
 				</div>
 				<div className={visable ? 'd-none' : 'product__price product__text'}>
 					<p>
-						<strong>{price[0] - 500}</strong> &#8381;
+						<strong>{changeNumber(price[0])}</strong> &#8381;
 					</p>
 					<Link to={`/categories/${categorie}/${id}`}>Подробнее</Link>
 				</div>
@@ -58,7 +70,7 @@ export const ProductItem = ({
 			{visable ? (
 				<div className='product__price product__text visable-list'>
 					<p>
-						<strong>{price[0] - 500}</strong> &#8381;
+						<strong>{changeNumber(price[0])}</strong> &#8381;
 					</p>
 					<Link to={`/categories/${categorie}/${id}`}>Подробнее</Link>
 				</div>

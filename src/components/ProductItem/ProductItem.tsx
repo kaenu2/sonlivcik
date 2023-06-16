@@ -15,14 +15,8 @@ export const ProductItem = ({
 	delay: number;
 }) => {
 	const changeNumber = (num: number) => {
-		if (num <= 10000) {
-			return num - 200;
-		}
-		if (num > 10000 && num <= 20000) {
+		if (num >= 20000) {
 			return num - 500;
-		}
-		if (num > 20000) {
-			return num - 1000;
 		}
 	};
 

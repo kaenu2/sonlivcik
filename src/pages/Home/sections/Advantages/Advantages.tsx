@@ -38,13 +38,13 @@ export const Advantages = () => {
 								sx={{ color: 'text.secondary' }}
 								className='advantages-home__name'
 							>
-								Бесплатная и быстрая доставка
+								Быстрая доставка
 							</Typography>
 						</AccordionSummary>
 						<AccordionDetails>
 							<Typography className='advantages-home__info'>
-								Бесплатная и быстрая доставка по Москве и Санк-Петербургу за 10
-								дней до вашего адреса осуществляется бесплатно.
+								Быстрая доставка по Москве и Санк-Петербургу за 10 дней до
+								вашего адреса.
 							</Typography>
 						</AccordionDetails>
 					</Accordion>

@@ -27,7 +27,7 @@ export const App = () => {
 			<TheHeader />
 			<Routes>
 				<Route
-					path=''
+					path='x'
 					element={<HomePage />}
 				/>
 				<Route

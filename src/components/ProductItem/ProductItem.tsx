@@ -56,7 +56,7 @@ export const ProductItem = ({
 				</div>
 				<div className={visable ? 'd-none' : 'product__price product__text'}>
 					<p>
-						<strong>{changeNumber(price[0])}</strong> &#8381;
+						<strong>{price[0]}</strong> &#8381;
 					</p>
 					<Link to={`/categories/${categorie}/${id}`}>Подробнее</Link>
 				</div>
@@ -64,7 +64,7 @@ export const ProductItem = ({
 			{visable ? (
 				<div className='product__price product__text visable-list'>
 					<p>
-						<strong>{changeNumber(price[0])}</strong> &#8381;
+						<strong>{price[0]}</strong> &#8381;
 					</p>
 					<Link to={`/categories/${categorie}/${id}`}>Подробнее</Link>
 				</div>
